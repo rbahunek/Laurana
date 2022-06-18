@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laurana</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/js/uikit.min.js"
+    integrity="sha512-wqamZDJQvRHCyy5j5dfHbqq0rUn31pS2fJeNL4vVjl0gnSVIZoHFqhwcoYWoJkVSdh5yORJt+T9lTdd8j9W4Iw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.14.3/css/uikit.min.css"
+    integrity="sha512-iWrYv6nUp7gzf+Ut/gMjxZn+SWdaiJYn+ZZNq63t2JO6kBpDc40wQfBzC1eOAzlwIMvRyuS974D1R8p1BTdaUw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taviraj:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/web.css" />
+</head>
+
+<body>
+  <header uk-sticky>
+    <div class="container-main centered">
+      <div class="header-content uk-flex uk-flex-middle">
+        <div class="uk-width-1-4@l uk-width-1-3@m uk-width-1-2">
+          <a class="header-logo" href="/index.html"> </a>
+        </div>
+        <div class="uk-width-3-4@l uk-width-2-3@m uk-width-1-2 uk-text-right">
+          <nav class="uk-display-inline-block">
+            <ul class="uk-flex uk-flex-between uk-flex-middle uk-margin-remove">
+              <li>
+                <a href="#services" uk-scroll>Usluge</a>
+              </li>
+              <li>
+                <a href="#about-us" uk-scroll>O nama</a>
+              </li>
+              <li>
+                <a class="selected" href="/gallery.html">Galerija radova</a>
+              </li>
+              <li>
+                <a href="/referenceses.html">Reference</a>
+              </li>
+              <li>
+                <a href="#location" uk-scroll>Lokacija</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="uk-padding uk-padding-remove-horizontal">
+<div class="gallery-page container-main centered">
+    <div class="uk-text-center uk-margin-large">
+        <h2>Pogledajte našu galeriju izdvojenih radova</h2>
+        <p>
+            Pogledajte galeriju radova u kojoj možete naći neke od recentnih projekata i radova na kojima<br> smo radili. Ukoliko imate nedoumice oko uokviravanja vaših slika posjetite nas u Špire Brusine 7.
+        </p>
+      </div>
+      <div uk-filter="target: .js-filter">
+
+        <ul class="uk-subnav uk-subnav-pill">
+            <li class="uk-active" uk-filter-control><a href="#">Sve kategorije</a></li>
+            <li uk-filter-control="[data-color='white']"><a href="#">Kategorija 1</a></li>
+            <li uk-filter-control="[data-color='blue']"><a href="#">Kategorija 2</a></li>
+            <li uk-filter-control="[data-color='black']"><a href="#">Kategorija 3</a></li>
+        </ul>
+    
+        <ul class="js-filter uk-child-width-1-4" uk-grid>
+            <li data-color="white">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 1</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="white">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 1</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="white">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 1</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="black">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 3</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="black">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 3</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="black">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 3</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="white">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 1</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="black">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 3</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="black">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 3</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="white">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 1</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+            <li data-color="blue">
+                <div class="gallery-item">
+                    <div>      
+                      <div class="card-body">
+                      <div class="uk-position-relative">
+                        <img src="/img/gallery.jpg" alt=""/>
+                        <div class="overlay"></div>
+                        <a class="gallery-link" href="#modal-gallery" uk-toggle>Vidi galeriju</a>
+                        <div id="modal-gallery" uk-modal>
+                          <div class="uk-modal-dialog uk-modal-body uk-padding-remove gallery-dialog">
+                            <button class="uk-modal-close close-modal" type="button"></button>
+                            <div class="hero-slider" tabindex="-1" uk-slider>
+                              <ul class="uk-slider-items">
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />              
+                                    
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="slide uk-position-relative">
+                                    <img src="/img/gallery-large.jpg" alt="" title="" />
+                                   
+                                  </div>
+                                </li>
+                              </ul>
+                              <a class="arrows uk-position-center-left uk-padding-remove" href="#" 
+                                uk-slider-item="previous"><img src="/img/slider/arrow.svg" alt="Ikona strelice u lijevo"
+                                  title="Prethodna" /></a>
+                              <a class="arrows uk-position-center-right uk-padding-remove uk-text-right" href="#" 
+                                uk-slider-item="next"><img src="/img/slider/arrow.svg" alt="Ikona strelice udesno" title="Sljedeća"
+                                  style="transform: rotate(180deg);" /></a>
+                            </div>
+                              
+                          </div>
+                      </div>
+                      </div>
+                      <p class="uk-margin-small">Kategorija 2</p>
+                        <h3 class="uk-margin-remove">Križni put - Crkva sv. Alojzija Stepinca</h3>
+                      </div>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+    
+    </div>
+
+</div>
+    
+</div>
+  </main>
+  <footer id="location" class="uk-padding-large uk-padding-remove-horizontal">
+<div class="container-small centered">
+  <div class="uk-text-center uk-margin-large hug centered">
+    <h2>Lokacija i radno vrijeme</h2>
+ </div>
+  <div uk-grid>
+    <div class="uk-width-1-3">
+      <div class="uk-margin-bottom">
+        <h5 class="oker-300">Posjetite nas</h5>
+        <p>Špire Brusine 7, 23000 Zadar</p>
+        <h6 class="small oker-300">(Poluotok, u prolazu prema Katastru)</h6>
+      </div>
+      <div class="uk-margin-bottom">
+        <h5 class="oker-300">Radno vrijeme</h5>
+        <p><span class="oker-300">Pon-Pet:</span> 8-14h</p>
+        <p><span class="oker-300">Sub:</span> 8-12h</p>
+      </div>
+      <div class="uk-margin-bottom">
+        <h5 class="oker-300">Kontakt</h5>
+        <p><span class="oker-300">Tel:</span> 023/312-458</p>
+        <p><span class="oker-300">Mail:</span> uo.laurana@gmail.com</p>
+      </div>
+      <div class="uk-margin-bottom">
+        <h5>Laurana</h5>
+        <h6 class="oker-300">obrt za uokviravanje slika, <br>
+          vl. Branimir Šalov, Zadar, <br>
+          Špire Brusine 7, <br>
+          OIB: 12345678</h6>
+      </div>
+    </div>
+    <div class="uk-width-2-3 uk-padding-remove-horizontal">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.555635996795!2d15.225025815764782!3d44.11316023058328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4761fa6ee21dadbd%3A0x6c00209e50db9b28!2sUl.%20%C5%A0pire%20Brusine%207%2C%2023000%2C%20Zadar!5e0!3m2!1sen!2shr!4v1655484050289!5m2!1sen!2shr" width="638" height="430" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+  </footer>
+
+  <script src="/js/script.js"></script>
+
+</body>
+
+</html>
